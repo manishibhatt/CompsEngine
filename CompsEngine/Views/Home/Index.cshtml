@@ -1,0 +1,199 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CompsEngine | Florida Commercial Sales Comps SaaS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="~/css/landing.css" rel="stylesheet" />
+</head>
+<body>
+    <header class="container">
+        <div class="logo">
+            <span class="logo-icon"></span>
+            CompsEngine
+        </div>
+        <nav>
+            <a href="#features">Features</a>
+            <a href="#pricing">Pricing</a>
+            <a href="#about">About</a>
+        </nav>
+        <a href="#" class="btn" id="openLogin">Get Started</a>
+    </header>
+
+    <section class="hero">
+        <h1>Instantly Find Commercial Real Estate Comps in Florida</h1>
+        <p>
+            <b>CompsEngine</b> is the fastest way to access accurate, up-to-date comparable sales for commercial properties across Florida. Save time, reduce guesswork, and make smarter decisions—powered by data you can trust.
+        </p>
+        <a href="#" class="btn" id="openRegister">Try It Free</a>
+    </section>
+
+    <section id="features" class="container">
+        <div class="features">
+            <div class="feature-card">
+                <span class="icon">📊</span>
+                <h3>Instant Sales Comps</h3>
+                <p>
+                    Instantly pull recent commercial sales data across Florida with a few clicks.
+                </p>
+            </div>
+            <div class="feature-card">
+                <span class="icon">📍</span>
+                <h3>Location Intelligence</h3>
+                <p>
+                    Filter comps by property type, location, size, and sale date for precise comparisons.
+                </p>
+            </div>
+            <div class="feature-card">
+                <span class="icon">✔️</span>
+                <h3>Verified Data</h3>
+                <p>
+                    All sales data is sourced from official records, updated daily, and validated for accuracy.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-title">How It Works</div>
+    <section class="container">
+        <div class="steps">
+            <div>
+                <div class="step-number">1</div>
+                <div class="step-title">Enter Property Details</div>
+                <div class="step-desc">Address, property type, and a few key facts.</div>
+            </div>
+            <div>
+                <div class="step-number">2</div>
+                <div class="step-title">Get Comparable Sales</div>
+                <div class="step-desc">View a ranked list of recent comparable sales nearby.</div>
+            </div>
+            <div>
+                <div class="step-number">3</div>
+                <div class="step-title">Analyze & Export</div>
+                <div class="step-desc">See trends, visualize data, and export for your reports.</div>
+            </div>
+        </div>
+    </section>
+
+    <div id="pricing" class="section-title">Simple Pricing</div>
+    <section class="container">
+        <div class="pricing">
+            <div class="pricing-card free">
+                <div class="plan">Free Trial</div>
+                <div class="price">$0</div>
+                <div>7-day access.<br>No credit card required.</div>
+                <ul>
+                    <li>Unlimited searches</li>
+                    <li>Access to all Florida counties</li>
+                    <li>Export sample report</li>
+                </ul>
+                <a href="#" class="btn" id="openRegister2">Start Free Trial</a>
+            </div>
+            <div class="pricing-card">
+                <div class="plan">Professional</div>
+                <div class="price">$49<span class="period">/mo</span></div>
+                <div>Full access.<br>Cancel anytime.</div>
+                <ul>
+                    <li>Unlimited reports</li>
+                    <li>Download CSV & PDF</li>
+                    <li>Priority support</li>
+                </ul>
+                <a href="#" class="btn" id="openRegister3">Subscribe Now</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about-section">
+        <h2>About CompsEngine</h2>
+        <p>
+            CompsEngine was built by Florida real estate tech veterans to solve one big problem:
+            making commercial sales data accessible, transparent, and actionable for everyone.
+            Our platform is trusted by brokers, appraisers, and investors statewide.
+        </p>
+    </section>
+
+    <footer>
+        <span class="cta">Ready to Get the Edge?</span>
+        <a href="#" class="btn">Start Your Free Trial</a>
+        <div class="copyright">&copy; 2025 CompsEngine. All rights reserved.</div>
+    </footer>
+    <!-- Login Modal -->
+    <div class="modal-overlay" id="loginModal">
+        <div class="modal">
+            <button class="close-modal" data-close="loginModal">&times;</button>
+            <h2>Login</h2>
+            <form id="loginForm">
+                <input type="email" placeholder="Email Address" required>
+                <input type="password" placeholder="Password" required>
+                <button type="submit" class="btn">Login</button>
+            </form>
+            <div class="links">
+                Don't have an account? <a id="switchToRegister">Register</a>
+            </div>
+        </div>
+    </div>
+    <!-- Register Modal -->
+    <div class="modal-overlay" id="registerModal">
+        <div class="modal">
+            <button class="close-modal" data-close="registerModal">&times;</button>
+            <h2>Register</h2>
+            <form id="registerForm">
+                <input type="text" placeholder="Full Name" required>
+                <input type="email" placeholder="Email Address" required>
+                <input type="password" placeholder="Password" required>
+                <input type="password" placeholder="Confirm Password" required>
+                <button type="submit" class="btn">Register</button>
+            </form>
+            <div class="links">
+                Already have an account? <a id="switchToLogin">Login</a>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function(){
+          // Open modals
+          $("#openLogin").click(()=> $("#loginModal").fadeIn().css("display","flex"));
+          $("#openRegister, #openRegister2, #openRegister3").click(()=> $("#registerModal").fadeIn().css("display","flex"));
+
+          // Close modals
+          $(".close-modal").click(function(){
+            $("#" + $(this).data("close")).fadeOut();
+          });
+          $(".modal-overlay").click(function(e){
+            if(e.target === this) $(this).fadeOut();
+          });
+
+          // Switch modals
+          $("#switchToRegister").click(function(){
+            $("#loginModal").hide();
+            $("#registerModal").fadeIn().css("display","flex");
+          });
+          $("#switchToLogin").click(function(){
+            $("#registerModal").hide();
+            $("#loginModal").fadeIn().css("display","flex");
+          });
+
+          // Form submit (demo)
+          $("#loginForm").submit(function(e){
+            e.preventDefault();
+            alert("Login successful (demo)");
+            $("#loginModal").fadeOut();
+          });
+          $("#registerForm").submit(function(e){
+            e.preventDefault();
+            alert("Registration successful (demo)");
+            $("#registerModal").fadeOut();
+          });
+        });
+    </script>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+</body>
+</html>
+
