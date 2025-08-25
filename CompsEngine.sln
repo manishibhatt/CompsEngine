@@ -1,9 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.14.36310.24 d17.14
+VisualStudioVersion = 17.14.36310.24
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CompsEngine", "CompsEngine\CompsEngine.csproj", "{97E441CD-8169-49AF-84F8-98A3E89990A5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CompsEngine.Api", "CompsEngine.Api\CompsEngine.Api.csproj", "{3DDA8EFE-131B-428E-A44A-134770F870FB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CompsEngine.Data", "CompsEngine.Data\CompsEngine.Data.csproj", "{34939CB7-85B9-4519-A0AD-79FAB6B1954E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{97E441CD-8169-49AF-84F8-98A3E89990A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{97E441CD-8169-49AF-84F8-98A3E89990A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{97E441CD-8169-49AF-84F8-98A3E89990A5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3DDA8EFE-131B-428E-A44A-134770F870FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3DDA8EFE-131B-428E-A44A-134770F870FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3DDA8EFE-131B-428E-A44A-134770F870FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3DDA8EFE-131B-428E-A44A-134770F870FB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{34939CB7-85B9-4519-A0AD-79FAB6B1954E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{34939CB7-85B9-4519-A0AD-79FAB6B1954E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{34939CB7-85B9-4519-A0AD-79FAB6B1954E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{34939CB7-85B9-4519-A0AD-79FAB6B1954E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
